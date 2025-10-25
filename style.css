@@ -1,0 +1,159 @@
+/* VARIABLES DE COLOR BASADAS EN EL LOGO */
+:root {
+    --color-principal: #004d40; /* Verde Oscuro Profesional */
+    --color-secundario: #4db6ac; /* Verde Menta Claro */
+    --color-acento: #ffc107; /* Amarillo Miel (de la abeja) */
+    --color-azul-claro: #42a5f5; /* Azul Cielo/Agua */
+    --color-fondo: #f4f4f4;
+    --color-texto: #333;
+}
+
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: #fff;
+}
+
+/* ENCABEZADO Y NAVEGACIÓN */
+header {
+    background: var(--color-principal);
+    color: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /* Fija el header al hacer scroll */
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: var(--color-acento); /* Destacamos el nombre con el color acento */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--color-secundario);
+}
+
+/* SECCIÓN HERO (Principal) */
+.hero {
+    background: url('fondo-consultoria-ambiental.jpg') no-repeat center center/cover; /* Reemplazar con una imagen de fondo relevante */
+    background-color: var(--color-azul-claro); 
+    color: white;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente para mejor lectura */
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.button {
+    display: inline-block;
+    background: var(--color-acento);
+    color: var(--color-principal);
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #ffeb3b; /* Tono de acento más claro al pasar el ratón */
+}
+
+/* SECCIONES DE CONTENIDO GENERAL */
+.content-section {
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content-section h3 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: var(--color-principal);
+}
+
+/* SECCIÓN DE SERVICIOS (Uso de Panal/Hexágono como inspiración) */
+.services {
+    background-color: var(--color-fondo);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.service-item {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    /* Inspiración sutil en el hexágono */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-item h4 {
+    color: var(--color-azul-claro);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+/* SECCIÓN DE CONTACTO */
+.contact-section {
+    background-color: var(--color-principal);
+    color: white;
+}
+
+.contact-section a {
+    color: var(--color-secundario);
+    text-decoration: none;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #222;
+    color: var(--color-fondo);
+    font-size: 0.9rem;
+  }
